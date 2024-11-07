@@ -980,3 +980,6 @@ code {
 section[id] {
   scroll-margin-top: 72px;
 }
+
+/* Fix: scroll offset para navbar fija */
+section[id] { scroll-margin-top: 72px; }
