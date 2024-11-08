@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="keywords" content="arduino, electronica, principiantes, tinkercad, circuitos, programacion" />
+  <meta name="author" content="Gardenia Magali Rodriguez Vasquez" />
+  <meta name="description" content="Aprende Arduino desde cero. Guía completa para principiantes sobre electrónica, programación y simulación con TinkerCAD." />
+  <title>Arduino para Principiantes</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono&display=swap" rel="stylesheet" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Arduino para Principiantes" />
+  <meta property="og:description" content="Aprende Arduino desde cero con TinkerCAD y simulación de circuitos." />
+  <meta property="og:type" content="website" />
+</head>
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#inicio" class="nav-logo">
+        <span class="logo-icon">⚡</span>
+        <span>Arduino<strong>Principiantes</strong></span>
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#inicio"         class="nav-link active">Inicio</a></li>
+        <li><a href="#que-es"         class="nav-link">¿Qué es Arduino?</a></li>
+        <li><a href="#componentes"    class="nav-link">Componentes</a></li>
+        <li><a href="#proyectos"      class="nav-link">Proyectos</a></li>
+        <li><a href="#quiz"           class="nav-link">Quiz</a></li>
+        <li><a href="#contacto"       class="nav-link">Contacto</a></li>
+        <li><a href="pages/simulacion.html" class="nav-link btn-sim" target="_blank">🔬 TinkerCAD</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero" id="inicio">
+    <div class="circuit-bg">
+      <svg class="circuit-svg" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+        <g stroke="#00d4aa" stroke-width="1.5" fill="none" opacity="0.3">
+          <path d="M0 150 H200 V100 H400 V200 H600 V150 H800"/>
+          <path d="M0 350 H150 V300 H350 V400 H550 V350 H800"/>
+          <path d="M200 0 V100 M200 200 V600"/>
+          <path d="M400 0 V100 M400 200 V400 M400 500 V600"/>
+          <path d="M600 0 V150 M600 250 V600"/>
+          <circle cx="200" cy="100" r="5" fill="#00d4aa" opacity="0.6" class="pulse-dot"/>
+          <circle cx="400" cy="200" r="5" fill="#00d4aa" opacity="0.6" class="pulse-dot"/>
+          <circle cx="600" cy="150" r="5" fill="#ffa726" opacity="0.6" class="pulse-dot"/>
+          <circle cx="150" cy="300" r="4" fill="#00d4aa" opacity="0.5" class="pulse-dot"/>
+          <circle cx="350" cy="400" r="4" fill="#ffa726" opacity="0.5" class="pulse-dot"/>
+        </g>
+      </svg>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge">⚡ La guía definitiva en español</div>
+      <h1 class="hero-title">
+        Aprende Arduino<br/>
+        <span class="text-teal">desde cero</span>
+      </h1>
+      <p class="hero-subtitle">
+        Descubre el mundo de la electrónica y la programación. Construye
+        circuitos virtuales en TinkerCAD sin riesgo, y da vida a tus ideas
+        paso a paso.
+      </p>
+      <div class="hero-btns">
+        <a href="#que-es" class="btn btn-primary">Empezar a aprender →</a>
+        <a href="#proyectos" class="btn btn-secondary">Ver proyectos</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-num">8</span><span class="stat-label">Proyectos</span></div>
+        <div class="stat"><span class="stat-num">10</span><span class="stat-label">Preguntas Quiz</span></div>
+        <div class="stat"><span class="stat-num">100%</span><span class="stat-label">Gratuito</span></div>
+        <div class="stat"><span class="stat-num">∞</span><span class="stat-label">Para principiantes</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ¿QUÉ ES ARDUINO? ========== -->
+  <section class="section" id="que-es">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Conceptos</span>
+        <h2>¿Qué es Arduino?</h2>
+        <p>Una plataforma de prototipado electrónico de código abierto que combina hardware y software accesibles para todos.</p>
+      </div>
+      <div class="cards-grid">
+        <div class="card card-glow">
+          <div class="card-icon" style="background:#00d4aa20;color:#00d4aa">🖥️</div>
+          <h3>Hardware</h3>
+          <p>Arduino es una placa electrónica con un microcontrolador (ATmega) y pines digitales/analógicos de entrada y salida. Se conecta a la computadora por USB para programarse.</p>
+        </div>
+        <div class="card card-glow">
+          <div class="card-icon" style="background:#ffa72620;color:#ffa726">💻</div>
+          <h3>Software (IDE)</h3>
+          <p>El IDE de Arduino permite programar en C/C++ simplificado. Sus dos funciones clave son <code>setup()</code> (se ejecuta una vez) y <code>loop()</code> (se repite infinitamente).</p>
+        </div>
+        <div class="card card-glow">
+          <div class="card-icon" style="background:#7b61ff20;color:#7b61ff">🌍</div>
+          <h3>Comunidad</h3>
+          <p>Más de 30 millones de usuarios en todo el mundo. Proyectos educativos, industriales y artísticos. Documentación oficial disponible en español en arduino.cc.</p>
+        </div>
+      </div>
+
+      <div class="timeline-section">
+        <h3 class="timeline-title">¿Cómo empezar? — Tus primeros 5 pasos</h3>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-num">1</div>
+            <div class="timeline-text"><strong>Instala el IDE</strong> — Descarga Arduino IDE desde arduino.cc/en/software</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-num">2</div>
+            <div class="timeline-text"><strong>Conecta tu placa</strong> — Usa un cable USB tipo B y selecciona el puerto COM correcto</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-num">3</div>
+            <div class="timeline-text"><strong>Escribe tu primer sketch</strong> — El clásico "Blink" hace parpadear el LED integrado</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-num">4</div>
+            <div class="timeline-text"><strong>Sube el código</strong> — Presiona el botón "→" (Upload) en el IDE</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-num">5</div>
+            <div class="timeline-text"><strong>¡Mira el resultado!</strong> — El LED parpadea. ¡Tu primer programa Arduino funciona!</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Diagrama visual de la placa Arduino -->
+      <div class="board-diagram">
+        <h3>Partes de un Arduino UNO</h3>
+        <div class="board">
+          <div class="board-part" style="top:10%;left:5%">
+            <div class="part-dot"></div>
+            <div class="part-label">USB (alimentación<br>y programación)</div>
+          </div>
+          <div class="board-part" style="top:10%;left:65%">
+            <div class="part-dot"></div>
+            <div class="part-label">Microcontrolador<br>ATmega328P</div>
+          </div>
+          <div class="board-part" style="top:60%;left:5%">
+            <div class="part-dot"></div>
+            <div class="part-label">Pines digitales<br>(0-13)</div>
+          </div>
+          <div class="board-part" style="top:60%;left:65%">
+            <div class="part-dot"></div>
+            <div class="part-label">Pines analógicos<br>(A0-A5)</div>
+          </div>
+          <div class="board-center">
+            <div class="board-chip">Arduino UNO</div>
+            <div class="board-pins">
+              <div class="pin-row">
+                <span class="pin digital">D0</span><span class="pin digital">D1</span>
+                <span class="pin digital">D2</span><span class="pin digital">D3</span>
+                <span class="pin pwm">D~4</span><span class="pin pwm">D~5</span>
+                <span class="pin pwm">D~6</span>
+              </div>
+              <div class="pin-row">
+                <span class="pin analog">A0</span><span class="pin analog">A1</span>
+                <span class="pin analog">A2</span><span class="pin analog">A3</span>
+                <span class="pin power">5V</span><span class="pin power">GND</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="pin-legend">
+          <span class="legend-item"><span class="pin digital sm">D</span> Pin Digital</span>
+          <span class="legend-item"><span class="pin pwm sm">~</span> PWM</span>
+          <span class="legend-item"><span class="pin analog sm">A</span> Analógico</span>
+          <span class="legend-item"><span class="pin power sm">P</span> Alimentación</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== COMPONENTES ========== -->
+  <section class="section section-dark" id="componentes">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Electrónica</span>
+        <h2>Componentes Básicos</h2>
+        <p>Los elementos esenciales que necesitas conocer para construir tus primeros circuitos con Arduino.</p>
+      </div>
+
+      <!-- BUSCADOR EN TIEMPO REAL (JavaScript) -->
+      <div class="search-box">
+        <span class="search-icon">🔍</span>
+        <input
+          type="search"
+          id="buscador"
+          class="search-input"
+          placeholder="Buscar componente..."
+          oninput="filtrarComponentes(this.value)"
+        />
+      </div>
+
+      <div class="filter-btns" id="filtro-categoria">
+        <button class="filter-btn active" onclick="filtrarCategoria('Todos', this)">Todos</button>
+        <button class="filter-btn" onclick="filtrarCategoria('Salida', this)">Salida</button>
+        <button class="filter-btn" onclick="filtrarCategoria('Pasivo', this)">Pasivo</button>
+        <button class="filter-btn" onclick="filtrarCategoria('Herramienta', this)">Herramienta</button>
+        <button class="filter-btn" onclick="filtrarCategoria('Sensor', this)">Sensor</button>
+      </div>
+
+      <div class="components-grid" id="components-grid">
+        <!-- Generado por JS -->
+      </div>
+      <p class="no-results hidden" id="no-results">No se encontraron componentes para "<span id="search-term"></span>".</p>
+    </div>
+  </section>
+
+  <!-- ========== PROYECTOS ========== -->
+  <section class="section" id="proyectos">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Práctica</span>
+        <h2>Proyectos para Principiantes</h2>
+        <p>Proyectos ordenados por dificultad. Cada uno incluye descripción, tiempo estimado y código Arduino real.</p>
+      </div>
+
+      <div class="filter-btns">
+        <button class="filter-btn active" onclick="filtrarProyectos('Todos', this)">Todos</button>
+        <button class="filter-btn" onclick="filtrarProyectos('Básico', this)">Básico</button>
+        <button class="filter-btn" onclick="filtrarProyectos('Intermedio', this)">Intermedio</button>
+        <button class="filter-btn" onclick="filtrarProyectos('Avanzado', this)">Avanzado</button>
+      </div>
+
+      <div class="projects-grid" id="projects-grid">
+        <!-- Generado por JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== QUIZ ========== -->
+  <section class="section section-dark" id="quiz">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Autoevaluación</span>
+        <h2>Quiz: ¿Cuánto has aprendido?</h2>
+        <p>Pon a prueba tus conocimientos sobre Arduino con 10 preguntas de opción múltiple.</p>
+      </div>
+
+      <div class="quiz-box" id="quiz-box">
+        <div class="quiz-progress-bar">
+          <div class="quiz-progress-fill" id="quiz-progress-fill"></div>
+        </div>
+        <p class="quiz-counter" id="quiz-counter">Pregunta 1 de 10</p>
+        <h3 class="quiz-question" id="quiz-question"></h3>
+        <div class="quiz-options" id="quiz-options"></div>
+        <button class="btn btn-primary" id="btn-siguiente" onclick="siguientePregunta()" disabled>Siguiente →</button>
+      </div>
+
+      <div class="quiz-result hidden" id="quiz-result">
+        <div class="result-icon" id="result-icon">🏆</div>
+        <h3 id="result-titulo">¡Excelente!</h3>
+        <p class="result-score" id="result-score">8 / 10</p>
+        <p id="result-msg">¡Felicidades! Eres un experto en Arduino.</p>
+        <button class="btn btn-primary" onclick="reiniciarQuiz()">Reiniciar quiz</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACTO ========== -->
+  <section class="section" id="contacto">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Comunidad</span>
+        <h2>¿Tienes dudas? Contáctanos</h2>
+        <p>Envíanos tu pregunta y te responderemos en menos de 24 horas.</p>
+      </div>
+
+      <div class="contact-layout">
+        <div class="contact-info">
+          <div class="contact-card">
+            <div class="contact-icon">📧</div>
+            <div>
+              <strong>Correo electrónico</strong>
+              <p>contacto@arduinoprincipiantes.com</p>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon">📍</div>
+            <div>
+              <strong>Comunidad en línea</strong>
+              <p>Disponible globalmente, para todos</p>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon">⏰</div>
+            <div>
+              <strong>Tiempo de respuesta</strong>
+              <p>Menos de 24 horas hábiles</p>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contact-form" onsubmit="enviarFormulario(event)">
+          <div class="form-group">
+            <label for="nombre">Nombre completo *</label>
+            <input type="text" id="nombre" placeholder="Tu nombre completo" required />
+            <span class="error-msg" id="err-nombre"></span>
+          </div>
+          <div class="form-group">
+            <label for="email">Correo electrónico *</label>
+            <input type="email" id="email" placeholder="tu@correo.com" required />
+            <span class="error-msg" id="err-email"></span>
+          </div>
+          <div class="form-group">
+            <label for="asunto">Asunto</label>
+            <select id="asunto">
+              <option value="">Selecciona un asunto...</option>
+              <option value="consulta">Consulta general</option>
+              <option value="tecnica">Duda técnica</option>
+              <option value="proyecto">Sugerencia de proyecto</option>
+              <option value="error">Reporte de error</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="mensaje">Mensaje *</label>
+            <textarea id="mensaje" rows="4" placeholder="Escribe tu mensaje (mínimo 20 caracteres)..." required></textarea>
+            <span class="error-msg" id="err-mensaje"></span>
+          </div>
+          <div class="form-group form-check">
+            <input type="checkbox" id="acepto" />
+            <label for="acepto">Acepto recibir respuestas por correo electrónico</label>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">Enviar mensaje ✉️</button>
+          <div class="form-success hidden" id="form-success">
+            ✅ ¡Mensaje enviado! Te responderemos pronto.
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="nav-logo"><span class="logo-icon">⚡</span><span>Arduino<strong>Principiantes</strong></span></div>
+          <p>Aprende, construye, comparte. La comunidad maker hispanohablante.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Contenido</h4>
+          <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#que-es">¿Qué es Arduino?</a></li>
+            <li><a href="#componentes">Componentes</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#quiz">Quiz</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Recursos externos</h4>
+          <ul>
+            <li><a href="https://www.arduino.cc" target="_blank">Arduino Oficial</a></li>
+            <li><a href="https://www.tinkercad.com" target="_blank">TinkerCAD</a></li>
+            <li><a href="https://www.arduino.cc/en/software" target="_blank">Descargar IDE</a></li>
+            <li><a href="https://www.arduino.cc/reference/es" target="_blank">Referencia en Español</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#">Política de privacidad</a></li>
+            <li><a href="#">Términos de uso</a></li>
+            <li><a href="#">Licencia MIT</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 Arduino para Principiantes — Desarrollado por Gardenia Magali Rodríguez Vásquez</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODAL CÓDIGO -->
+  <div class="modal-overlay hidden" id="modal-overlay" onclick="cerrarModal()">
+    <div class="modal" onclick="event.stopPropagation()">
+      <button class="modal-close" onclick="cerrarModal()">✕</button>
+      <h3 id="modal-titulo">Código del proyecto</h3>
+      <pre class="code-block" id="modal-codigo"></pre>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
