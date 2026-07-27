@@ -1,0 +1,27 @@
+kind = "web"
+previewPath = "/"
+title = "Arduino para Principiantes"
+version = "1.0.0"
+id = "artifacts/arduino-principiantes"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 21622
+
+[services.development]
+run = "pnpm --filter @workspace/arduino-principiantes run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/arduino-principiantes", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/arduino-principiantes/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "21622"
+BASE_PATH = "/"
