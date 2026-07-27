@@ -155,7 +155,7 @@ O usar la acción automática de GitHub Actions para despliegue continuo.
 
 ## 👤 Autor
 
-Proyecto desarrollado como recurso educativo para la comunidad maker hispanohablante.
+GARDENIA MAGALI RODRIGUEZ VASQUEZ 
 
 ---
 
