@@ -975,3 +975,8 @@ code {
   .components-grid { grid-template-columns: 1fr; }
   .projects-grid { grid-template-columns: 1fr; }
 }
+
+/* ---- Fix: scroll offset para navbar fija ---- */
+section[id] {
+  scroll-margin-top: 72px;
+}
